@@ -30,7 +30,7 @@ function broadcast(room,obj,except=null){
 function broadcastPlayers(room){ broadcast(room,{type:"room_players",players:roomPlayers(room)}); }
 
 const server = http.createServer((req,res)=>{
-  if(req.url==="/health"){res.writeHead(200,{"content-type":"application/json","cache-control":"no-store","access-control-allow-origin":"*"});return res.end(JSON.stringify({ok:true,rooms:rooms.size,version:"2.2.0"}))}
+  if(req.url==="/health"){res.writeHead(200,{"content-type":"application/json","cache-control":"no-store","access-control-allow-origin":"*"});return res.end(JSON.stringify({ok:true,rooms:rooms.size,version:"2.3.0"}))}
   let pathname = decodeURIComponent(req.url.split("?")[0]);
   if(pathname==="/") pathname="/index.html";
   const file=path.normalize(path.join(ROOT,pathname));

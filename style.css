@@ -384,3 +384,11 @@ body{background:radial-gradient(circle at 50% 15%,#182033 0,#090c14 42%,#05070c 
 /* v2.2 cinematic actor render */
 #game{filter:contrast(1.06) saturate(1.10) brightness(.98)}
 .game-wrap:after{content:"";pointer-events:none;position:absolute;inset:0;box-shadow:inset 0 0 95px rgba(0,0,0,.36)}
+
+/* v2.3 dark combat */
+.game-wrap,.controls,.simple-pad,.action,#joystickBase,#joystickKnob,#game,#fx3d{
+-webkit-user-select:none!important;user-select:none!important;-webkit-touch-callout:none!important;-webkit-tap-highlight-color:transparent!important}
+.game-wrap img,.controls svg{-webkit-user-drag:none;user-drag:none;pointer-events:none}
+.stat.armor i{background:linear-gradient(90deg,#79899a,#d7e1eb 60%,#fff)}
+.action.charging{transform:scale(.96);border-color:rgba(255,221,135,.9)!important;box-shadow:0 0 28px rgba(255,155,70,.38)!important}
+.action.charging:after{content:"CHARGE";position:absolute;top:-18px;left:50%;transform:translateX(-50%);font:700 8px Arial;letter-spacing:.12em;color:#ffd896;text-shadow:0 2px 5px #000}

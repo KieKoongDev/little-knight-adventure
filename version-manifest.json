@@ -1,8 +1,8 @@
 {
   "game": "อัศวินจิ๋วผจญภัย",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "minClientVersion": "1.3.0",
-  "totalSize": 12530042,
+  "totalSize": 16053402,
   "assets": [
     {
       "url": "./assets/ai/title_art.png",
@@ -989,6 +989,30 @@
       "size": 7591
     },
     {
+      "url": "./assets/stages_gen/bamboo_ruins.png",
+      "label": "bamboo_ruins.png",
+      "hash": "19a73a5611ec8a74",
+      "size": 876842
+    },
+    {
+      "url": "./assets/stages_gen/crimson_fort.png",
+      "label": "crimson_fort.png",
+      "hash": "58bf0df746399b56",
+      "size": 825651
+    },
+    {
+      "url": "./assets/stages_gen/neon_alley.png",
+      "label": "neon_alley.png",
+      "hash": "62c1932cf701908a",
+      "size": 1000175
+    },
+    {
+      "url": "./assets/stages_gen/void_temple.png",
+      "label": "void_temple.png",
+      "hash": "43d3c9bb32595b93",
+      "size": 932768
+    },
+    {
       "url": "./assets/stages_hd/bamboo_ruins.png",
       "label": "bamboo_ruins.png",
       "hash": "eb2c0120d3eb965a",
@@ -1197,12 +1221,6 @@
       "label": "wand.png",
       "hash": "41c44ee3f8f38891",
       "size": 13316
-    },
-    {
-      "url": "./concept/v2_aggressive_art_direction.webp",
-      "label": "v2_aggressive_art_direction.webp",
-      "hash": "de66b96d668b6159",
-      "size": 112076
     },
     {
       "url": "./manifest.webmanifest",
