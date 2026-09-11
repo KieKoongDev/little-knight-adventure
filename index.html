@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"/>
+<meta name="theme-color" content="#0d1119"/><meta name="apple-mobile-web-app-capable" content="yes"/>
+<link rel="manifest" href="manifest.webmanifest"/>
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png"/>
+<link rel="apple-touch-icon" href="assets/icons/icon-192.png"/><link rel="stylesheet" href="style.css?v=1.9.2"/>
+<title>อัศวินจิ๋วผจญภัย v1.9.2</title>
+</head>
+<body>
+
+<div id="bootScreen" class="boot-screen">
+  <div class="boot-card">
+    <img src="assets/icons/icon-192.png" class="boot-icon" alt="อัศวินจิ๋วผจญภัย"/>
+    <h1>อัศวินจิ๋วผจญภัย</h1>
+    <div id="bootStatus">กำลังตรวจสอบทรัพยากร...</div>
+    <div class="boot-progress"><i id="bootBar"></i></div>
+    <div class="boot-meta"><span id="bootPercent">0%</span><span id="bootSize">0 MB</span></div>
+    <button id="bootRetry" class="hidden">ลองใหม่</button>
+  </div>
+</div>
+
+<div id="versionBadge">v1.9.2</div><div id="rotate">หมุนหน้าจอเป็นแนวนอนเพื่อเล่น</div>
+<svg class="icon-defs" aria-hidden="true">
+<symbol id="i-attack" viewBox="0 0 24 24"><path d="M5 19 19 5M14 5h5v5M4 15l5 5"/></symbol>
+<symbol id="i-skill" viewBox="0 0 24 24"><path d="M12 3 9 10l-6 2 6 2 3 7 3-7 6-2-6-2-3-7Z"/></symbol>
+<symbol id="i-weapon" viewBox="0 0 24 24"><path d="M4 20 18 6M14 5h5v5M3 15l6 6"/></symbol>
+<symbol id="i-jump" viewBox="0 0 24 24"><path d="m5 15 7-8 7 8M12 7v13"/></symbol>
+<symbol id="i-ult" viewBox="0 0 24 24"><path d="m13 2-7 11h5l-1 9 8-12h-5V2Z"/></symbol>
+<symbol id="i-dash" viewBox="0 0 24 24"><path d="M3 8h9M2 12h13M5 16h7M14 5l7 7-7 7"/></symbol>
+<symbol id="i-guard" viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 5 3 8 7 9 4-1 7-4 7-9V6l-7-3Z"/></symbol>
+<symbol id="i-throw" viewBox="0 0 24 24"><path d="M3 16c4-7 9-9 17-9M14 3l6 4-5 5"/></symbol>
+<symbol id="i-pick" viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"/></symbol>
+<symbol id="i-potion" viewBox="0 0 24 24"><path d="M9 3h6M10 3v5l-4 5v7h12v-7l-4-5V3M8 15h8"/></symbol>
+<symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18a3 3 0 1 1-2-2.8V6l12-2v11a3 3 0 1 1-2-2.8V8L9 9v9Z"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+<symbol id="i-full" viewBox="0 0 24 24"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/></symbol>
+</svg>
+<main id="app">
+<section id="characterSelect" class="panel select-panel">
+<div class="brand-title">
+<img src="assets/ai/title_art.png" alt="อัศวินจิ๋วผจญภัย"/>
+<div><div class="eyebrow">อัศวินจิ๋วผจญภัย <span>v1.9.2</span></div><h1>เลือกอัศวิน</h1></div>
+</div>
+<p class="sub">เลือกฮีโร่ • จัดอาชีพ • หาอาวุธ • ล่าบอสกับเพื่อน</p>
+<div class="hero-grid">
+<button class="hero-card selected" data-hero="ronin"><img src="assets/portraits/ronin.png" class="sheet-preview"/><b>ไร — โรนิน</b><small>ดาบ • เคาน์เตอร์ • สมดุล</small></button>
+<button class="hero-card" data-hero="ember"><img src="assets/portraits/ember.png" class="sheet-preview"/><b>เคน — นักสู้</b><small>หมัด • คอมโบเร็ว • พุ่งประชิด</small></button>
+<button class="hero-card" data-hero="arcane"><img src="assets/portraits/arcane.png" class="sheet-preview"/><b>มิร่า — นักเวท</b><small>เวท • คุมพื้นที่ • น้ำแข็ง</small></button>
+<button class="hero-card" data-hero="kira"><img src="assets/portraits/kira.png" class="sheet-preview"/><b>คิระ — เงา</b><small>มีดคู่ • หลบไว • Burst</small></button>
+<button class="hero-card" data-hero="bronn"><img src="assets/portraits/bronn.png" class="sheet-preview"/><b>บรอนน์ — ผู้พิทักษ์</b><small>โล่ • ทน • กระแทกหนัก</small></button>
+<button class="hero-card" data-hero="lyra"><img src="assets/portraits/lyra.png" class="sheet-preview"/><b>ไลรา — นักธนู</b><small>ธนู • ยิงไกล • Backstep</small></button>
+<button class="hero-card" data-hero="sora"><img src="assets/portraits/sora.png" class="sheet-preview"/><b>โซระ — นักลมหอก</b><small>หอก • ระยะกลาง • พายุ</small></button>
+<button class="hero-card" data-hero="nami"><img src="assets/portraits/nami.png" class="sheet-preview"/><b>นามิ — นักเวทวารี</b><small>คทา • ฮีล • กระสุนวารี</small></button>
+<button class="hero-card" data-hero="grom"><img src="assets/portraits/grom.png" class="sheet-preview"/><b>กรอม — เบอร์เซิร์ก</b><small>ขวาน • หนัก • เสี่ยงแลกแรง</small></button>
+<button class="hero-card" data-hero="faye"><img src="assets/portraits/faye.png" class="sheet-preview"/><b>เฟย์ — นักจักร</b><small>จักร • คล่องตัว • โจมตีวนกลับ</small></button>
+</div>
+<div id="heroDetail" class="hero-detail"></div>
+<div class="costume-wrap">
+  <span>ชุดตัวละคร</span>
+  <div id="costumeChoices" class="costume-choices">
+    <button class="costume-chip selected" data-costume="classic">ดั้งเดิม</button>
+    <button class="costume-chip" data-costume="royal">ราชองครักษ์</button>
+    <button class="costume-chip" data-costume="ember">เพลิง</button>
+  </div>
+</div>
+<div class="mode-title">เลือกโหมด</div>
+<div id="modeGrid" class="mode-grid">
+  <button class="mode-card selected" data-mode="adventure"><b>ผจญภัย</b><small>ผ่านพื้นที่ • พัก • ล่าบอส</small></button>
+  <button class="mode-card" data-mode="survival"><b>เอาชีวิตรอด</b><small>ศัตรูมาเรื่อย ๆ และเก่งขึ้น</small></button>
+  <button class="mode-card" data-mode="bossrush"><b>ล่าบอส</b><small>สู้บอสต่อเนื่องทุกด่าน</small></button>
+  <button class="mode-card online" data-mode="coop"><b>เล่นกับเพื่อน</b><small>2–4 คน • ใช้รหัสห้อง</small></button>
+</div>
+<div id="offlineActions"><button id="startBtn" class="primary start">เริ่มเกม</button></div>
+<div id="onlineSetup" class="online-setup hidden">
+  <div id="incomingInvite" class="incoming-invite hidden">
+    <b>คำชวนตะลุยด่าน</b>
+    <span id="incomingInviteText">มีเพื่อนชวนคุณเข้าห้อง</span>
+  </div>
+  <div class="online-auto-row">
+    <div><b>Game Server</b><span id="serverModeText">Auto • ใช้โดเมนเดียวกับเกม</span></div>
+    <button id="toggleServerBtn" type="button">ตั้งค่าขั้นสูง</button>
+  </div>
+  <div id="serverAdvanced" class="server-line hidden"><input id="serverUrl" placeholder="WebSocket Server (auto)"/><button id="useAutoServerBtn" type="button">Auto</button></div>
+  <div id="onlineStatus" class="online-status">พร้อมสร้างห้อง</div>
+  <div class="room-actions">
+    <button id="createRoomBtn" class="create-room-cta">สร้างห้อง + ลิงก์ชวน</button>
+    <input id="joinCode" maxlength="6" placeholder="รหัสห้อง"/>
+    <button id="joinRoomBtn">เข้าห้อง</button>
+  </div>
+  <div class="coop-howto">
+    <span><b>1</b> สร้างห้อง</span><span><b>2</b> ส่งลิงก์</span><span><b>3</b> เพื่อนกดพร้อม</span><span><b>4</b> Host เริ่มตะลุยด่าน</span>
+  </div>
+  <small>ลิงก์ชวนจะมี Room Code และ Game Server ให้เพื่อนอัตโนมัติ</small>
+</div>
+<div class="tips">Mobile: Sticky Analog • A Attack/Charge • X Skill • B Double Jump • T Throw • P Potion • G Guard<br/>คีย์บอร์ด: WASD • J ตี • K สกิล • Space กระโดด • G กัน</div>
+</section>
+
+<section id="lobby" class="panel lobby hidden">
+<div class="eyebrow">เล่นกับเพื่อน</div><h1>ROOM <span id="roomCodeText">------</span></h1>
+<div class="net-row"><p id="netStatus">CONNECTED</p><span id="pingText">PING -- ms</span></div>
+<div id="lobbyPlayers" class="lobby-players"></div>
+<div class="invite-card">
+  <div class="invite-head"><b>ชวนเพื่อนตะลุยด่าน</b><span>ส่งลิงก์นี้ให้เพื่อนเปิดได้เลย</span></div>
+  <div class="invite-link-row">
+    <input id="inviteLink" readonly value=""/>
+    <button id="copyInviteBtn">คัดลอกลิงก์</button>
+    <button id="shareInviteBtn">แชร์</button>
+  </div>
+</div>
+<div class="lobby-actions"><button id="readyBtn">พร้อม</button><button id="copyRoomBtn">คัดลอกรหัส</button><button id="leaveRoomBtn">ออก</button><button id="startMatchBtn" class="primary hidden">เริ่มตะลุยด่าน</button></div>
+<small>สูงสุด 4 คน • ทุกคนกดพร้อม แล้ว Host เริ่มเกม</small>
+</section>
+<section id="gameWrap" class="hidden">
+<canvas id="game" width="1280" height="720"></canvas><canvas id="fx3d" width="1280" height="720" aria-hidden="true"></canvas>
+<div class="hud">
+<div class="hero-info">
+<div class="hero-line"><b id="heroName">ไร</b><span id="heroTag">โรนิน</span><span id="weaponName"></span></div>
+<div class="stat hp"><span>HP</span><div><i id="hpBar"></i></div></div>
+<div class="stat mp"><span>MP</span><div><i id="mpBar"></i></div></div>
+</div>
+<div class="stat ult"><span>ULT</span><div><i id="ultBar"></i></div></div>
+</div>
+<div class="center-status"><b id="stageName">NEON ALLEY</b><span>WAVE <strong id="waveNo">1</strong></span><small id="bgmMode" class="bgm-mode">BATTLE BGM</small><div id="comboCounter" class="combo-counter hidden">0 HIT</div></div>
+<div class="top-actions">
+<button id="audioBtn" aria-label="เพลง"><svg><use href="#i-music"/></svg></button>
+<button id="fullscreenBtn" aria-label="เต็มจอ"><svg><use href="#i-full"/></svg></button>
+<button id="menuBtn" aria-label="เมนู"><svg><use href="#i-menu"/></svg></button>
+</div>
+</div>
+<div id="pickupToast"></div>
+<div id="comboHint" class="combo-hint">
+<span>← → + ตี = พุ่ง</span>
+<span>↓ → + ตี = เสย</span>
+<span>← → ↓ + ตี = ท่าหนัก</span>
+<span>→ + กระโดด + ตี = โจมตีกลางอากาศ</span>
+<span>↓ + สกิล = สกิล 2</span>
+</div>
+
+<canvas id="miniMap" class="mini-map" width="180" height="72"></canvas>
+<div id="coopHud" class="coop-hud hidden">
+  <div id="coopPlayers"></div>
+</div>
+<div id="revivePrompt" class="revive-prompt hidden">HOLD NEAR ALLY TO REVIVE</div>
+<div id="downedOverlay" class="downed-overlay hidden">
+  <b>DOWNED</b>
+  <span id="downedMessage">เพื่อนชุบได้ก่อนหมดเวลา • จากนั้นจะ Respawn</span>
+  <small id="bleedoutText">20s</small>
+</div>
+<div id="bossBanner" class="hidden">MONSTER BOSS</div>
+<div id="touchLayer">
+<div id="joystickBase" class="joystick"><div class="joy-ring"></div><div id="joystickKnob"></div></div>
+<div class="action-pad simple-pad">
+<button id="attackBtn" class="action attack" aria-label="ตี"><svg class="action-icon"><use href="#i-attack"/></svg><small>ตี</small></button>
+<button id="blockBtn" class="action block" aria-label="กัน"><svg class="action-icon"><use href="#i-guard"/></svg><small>กัน</small></button>
+<button id="jumpBtn" class="action jump" aria-label="กระโดด"><svg class="action-icon"><use href="#i-jump"/></svg><small>กระโดด</small></button>
+<button id="skillBtn" class="action skill" aria-label="สกิล"><svg class="action-icon"><use href="#i-skill"/></svg><small>สกิล</small></button>
+</div></div>
+
+
+<div id="stageGate" class="stage-gate hidden"><div class="gate-light"></div><b>NEXT →</b><small id="gateStatus">GO TO EXIT</small></div>
+<div id="restBanner" class="rest-banner hidden"><b>จุดพัก</b><span>ฟื้นพลังแล้ว • เดินไปทางขวาเมื่อพร้อม</span></div>
+<div id="jobGrid" class="job-grid"></div><small>Demo: เปลี่ยนอาชีพได้ระหว่างด่าน เพื่อทดลอง moveset</small></div>
+
+<h2>เลือกการอัปเกรด</h2><div id="perkChoices" class="perk-grid"></div></div></div>
+<div id="gameOver" class="overlay hidden"><div class="overlay-card"><h2>พ่ายแพ้</h2><button id="retryBtn" class="primary">ลองอีกครั้ง</button><button id="selectBtn">เปลี่ยนตัวละคร</button></div></div>
+<div id="stageClear" class="overlay hidden"><div class="overlay-card"><h2>ผ่านด่าน</h2><p id="nextStageText"></p></div></div>
+</section></main>
+<script src="bootstrap.js?v=1.9.2"></script>
+<script src="three-effects.js?v=1.9.2"></script>
+<script src="game.js?v=1.9.2"></script>
+</body></html>

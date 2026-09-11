@@ -1,0 +1,830 @@
+{
+  "game": "อัศวินจิ๋วผจญภัย",
+  "version": "1.9.2",
+  "minClientVersion": "1.3.0",
+  "totalSize": 1724212,
+  "assets": [
+    {
+      "url": "./assets/ai/title_art.png",
+      "label": "title_art.png",
+      "hash": "292d1ea7b4e86fcd",
+      "size": 209383
+    },
+    {
+      "url": "./assets/bosses/oni_beast.png",
+      "label": "oni_beast.png",
+      "hash": "296e0bdd3ef084b1",
+      "size": 5248
+    },
+    {
+      "url": "./assets/bosses/stone_titan.png",
+      "label": "stone_titan.png",
+      "hash": "f0918c7dab74d865",
+      "size": 3730
+    },
+    {
+      "url": "./assets/bosses/void_colossus.png",
+      "label": "void_colossus.png",
+      "hash": "9da2ddc515532bb4",
+      "size": 5293
+    },
+    {
+      "url": "./assets/bosses/wyrm.png",
+      "label": "wyrm.png",
+      "hash": "5ca38c6fe2cae3b9",
+      "size": 7030
+    },
+    {
+      "url": "./assets/enemies/boss.png",
+      "label": "boss.png",
+      "hash": "30dcf316949733ff",
+      "size": 2464
+    },
+    {
+      "url": "./assets/enemies/brute.png",
+      "label": "brute.png",
+      "hash": "804b7b459816afbd",
+      "size": 2309
+    },
+    {
+      "url": "./assets/enemies/grunt.png",
+      "label": "grunt.png",
+      "hash": "1a98c1b667ff3ebd",
+      "size": 2257
+    },
+    {
+      "url": "./assets/enemies/mage.png",
+      "label": "mage.png",
+      "hash": "11b7200532a289a6",
+      "size": 2419
+    },
+    {
+      "url": "./assets/enemies/rogue.png",
+      "label": "rogue.png",
+      "hash": "5f467ca6a97519f3",
+      "size": 2266
+    },
+    {
+      "url": "./assets/enemies_v2/archer.png",
+      "label": "archer.png",
+      "hash": "fad8d630b99c1ad7",
+      "size": 4597
+    },
+    {
+      "url": "./assets/enemies_v2/beast.png",
+      "label": "beast.png",
+      "hash": "f2484e80fcb338e7",
+      "size": 3055
+    },
+    {
+      "url": "./assets/enemies_v2/brute.png",
+      "label": "brute.png",
+      "hash": "b76b4c3db630093a",
+      "size": 2851
+    },
+    {
+      "url": "./assets/enemies_v2/crawler.png",
+      "label": "crawler.png",
+      "hash": "2d6c7e22024b5f4c",
+      "size": 3046
+    },
+    {
+      "url": "./assets/enemies_v2/grunt.png",
+      "label": "grunt.png",
+      "hash": "55867cc2744e3182",
+      "size": 2797
+    },
+    {
+      "url": "./assets/enemies_v2/mage.png",
+      "label": "mage.png",
+      "hash": "a0560d1e15d02641",
+      "size": 3094
+    },
+    {
+      "url": "./assets/enemies_v2/rogue.png",
+      "label": "rogue.png",
+      "hash": "bd12df3051832336",
+      "size": 2837
+    },
+    {
+      "url": "./assets/enemies_v2/shield.png",
+      "label": "shield.png",
+      "hash": "7352cb70f79071b3",
+      "size": 4231
+    },
+    {
+      "url": "./assets/enemies_v2/spearman.png",
+      "label": "spearman.png",
+      "hash": "0e3fdf56478a955f",
+      "size": 2801
+    },
+    {
+      "url": "./assets/enemies_v2/warden.png",
+      "label": "warden.png",
+      "hash": "83e8f68c074213ec",
+      "size": 4220
+    },
+    {
+      "url": "./assets/enemies_v2/warlock.png",
+      "label": "warlock.png",
+      "hash": "c6e87fa4fd51563e",
+      "size": 3097
+    },
+    {
+      "url": "./assets/heroes/arcane.png",
+      "label": "arcane.png",
+      "hash": "c3400b58acb221ad",
+      "size": 5548
+    },
+    {
+      "url": "./assets/heroes/ember.png",
+      "label": "ember.png",
+      "hash": "5b7b0dba0a772525",
+      "size": 4969
+    },
+    {
+      "url": "./assets/heroes/ronin.png",
+      "label": "ronin.png",
+      "hash": "7ae7f3842731a283",
+      "size": 5826
+    },
+    {
+      "url": "./assets/heroes_costumes/arcane_classic.png",
+      "label": "arcane_classic.png",
+      "hash": "153cd44cf6b9946d",
+      "size": 13499
+    },
+    {
+      "url": "./assets/heroes_costumes/arcane_ember.png",
+      "label": "arcane_ember.png",
+      "hash": "b3f84afe15653d0a",
+      "size": 15521
+    },
+    {
+      "url": "./assets/heroes_costumes/arcane_royal.png",
+      "label": "arcane_royal.png",
+      "hash": "0d3bd3434183ebe8",
+      "size": 15517
+    },
+    {
+      "url": "./assets/heroes_costumes/bronn_classic.png",
+      "label": "bronn_classic.png",
+      "hash": "b888ac8018373370",
+      "size": 12856
+    },
+    {
+      "url": "./assets/heroes_costumes/bronn_ember.png",
+      "label": "bronn_ember.png",
+      "hash": "2434a48d045522e5",
+      "size": 15021
+    },
+    {
+      "url": "./assets/heroes_costumes/bronn_royal.png",
+      "label": "bronn_royal.png",
+      "hash": "4a53ad46b8df3444",
+      "size": 14919
+    },
+    {
+      "url": "./assets/heroes_costumes/ember_classic.png",
+      "label": "ember_classic.png",
+      "hash": "9a2b8a7de89159ae",
+      "size": 13077
+    },
+    {
+      "url": "./assets/heroes_costumes/ember_ember.png",
+      "label": "ember_ember.png",
+      "hash": "ba22752ff5d9c7ab",
+      "size": 15009
+    },
+    {
+      "url": "./assets/heroes_costumes/ember_royal.png",
+      "label": "ember_royal.png",
+      "hash": "611978ae7c2b884e",
+      "size": 15142
+    },
+    {
+      "url": "./assets/heroes_costumes/faye_classic.png",
+      "label": "faye_classic.png",
+      "hash": "334757ef20ea94cf",
+      "size": 13865
+    },
+    {
+      "url": "./assets/heroes_costumes/faye_ember.png",
+      "label": "faye_ember.png",
+      "hash": "e781cfae61668f23",
+      "size": 16183
+    },
+    {
+      "url": "./assets/heroes_costumes/faye_royal.png",
+      "label": "faye_royal.png",
+      "hash": "609ff0ae02d020c1",
+      "size": 15888
+    },
+    {
+      "url": "./assets/heroes_costumes/grom_classic.png",
+      "label": "grom_classic.png",
+      "hash": "d7f83b61c2f08fb5",
+      "size": 12869
+    },
+    {
+      "url": "./assets/heroes_costumes/grom_ember.png",
+      "label": "grom_ember.png",
+      "hash": "71d570e17a0d1bdc",
+      "size": 15037
+    },
+    {
+      "url": "./assets/heroes_costumes/grom_royal.png",
+      "label": "grom_royal.png",
+      "hash": "d393d00445896b86",
+      "size": 14854
+    },
+    {
+      "url": "./assets/heroes_costumes/kira_classic.png",
+      "label": "kira_classic.png",
+      "hash": "76aa62015f3d1818",
+      "size": 13822
+    },
+    {
+      "url": "./assets/heroes_costumes/kira_ember.png",
+      "label": "kira_ember.png",
+      "hash": "7c3796298dedd53c",
+      "size": 16222
+    },
+    {
+      "url": "./assets/heroes_costumes/kira_royal.png",
+      "label": "kira_royal.png",
+      "hash": "c92949d39131f931",
+      "size": 15930
+    },
+    {
+      "url": "./assets/heroes_costumes/lyra_classic.png",
+      "label": "lyra_classic.png",
+      "hash": "76576beb58abb0f2",
+      "size": 13624
+    },
+    {
+      "url": "./assets/heroes_costumes/lyra_ember.png",
+      "label": "lyra_ember.png",
+      "hash": "f4e39f60d7ec9c11",
+      "size": 15796
+    },
+    {
+      "url": "./assets/heroes_costumes/lyra_royal.png",
+      "label": "lyra_royal.png",
+      "hash": "9b52c8563a9328fd",
+      "size": 15708
+    },
+    {
+      "url": "./assets/heroes_costumes/nami_classic.png",
+      "label": "nami_classic.png",
+      "hash": "94adb64b1cd8566c",
+      "size": 13472
+    },
+    {
+      "url": "./assets/heroes_costumes/nami_ember.png",
+      "label": "nami_ember.png",
+      "hash": "03f4738b6b6e12d4",
+      "size": 15562
+    },
+    {
+      "url": "./assets/heroes_costumes/nami_royal.png",
+      "label": "nami_royal.png",
+      "hash": "2fff4915d409e366",
+      "size": 15534
+    },
+    {
+      "url": "./assets/heroes_costumes/ronin_classic.png",
+      "label": "ronin_classic.png",
+      "hash": "ef8a12b8277e0fdf",
+      "size": 14178
+    },
+    {
+      "url": "./assets/heroes_costumes/ronin_ember.png",
+      "label": "ronin_ember.png",
+      "hash": "32a5a491d437bd84",
+      "size": 16075
+    },
+    {
+      "url": "./assets/heroes_costumes/ronin_royal.png",
+      "label": "ronin_royal.png",
+      "hash": "524d40aeebabb63c",
+      "size": 16208
+    },
+    {
+      "url": "./assets/heroes_costumes/sora_classic.png",
+      "label": "sora_classic.png",
+      "hash": "d42a73dae9502232",
+      "size": 13617
+    },
+    {
+      "url": "./assets/heroes_costumes/sora_ember.png",
+      "label": "sora_ember.png",
+      "hash": "5582a582bcb23c94",
+      "size": 15734
+    },
+    {
+      "url": "./assets/heroes_costumes/sora_royal.png",
+      "label": "sora_royal.png",
+      "hash": "3e86a68de8e4c7de",
+      "size": 15766
+    },
+    {
+      "url": "./assets/heroes_v2/arcane.png",
+      "label": "arcane.png",
+      "hash": "672d2aee80d71cb1",
+      "size": 8545
+    },
+    {
+      "url": "./assets/heroes_v2/bronn.png",
+      "label": "bronn.png",
+      "hash": "9abcf7f236e84098",
+      "size": 8155
+    },
+    {
+      "url": "./assets/heroes_v2/ember.png",
+      "label": "ember.png",
+      "hash": "d45576f9876e2bc1",
+      "size": 8249
+    },
+    {
+      "url": "./assets/heroes_v2/kira.png",
+      "label": "kira.png",
+      "hash": "09bb6193f33ffb38",
+      "size": 9106
+    },
+    {
+      "url": "./assets/heroes_v2/lyra.png",
+      "label": "lyra.png",
+      "hash": "ec21fda237b2a03b",
+      "size": 8591
+    },
+    {
+      "url": "./assets/heroes_v2/ronin.png",
+      "label": "ronin.png",
+      "hash": "9f620dc7d76d4320",
+      "size": 9484
+    },
+    {
+      "url": "./assets/heroes_v3/arcane.png",
+      "label": "arcane.png",
+      "hash": "153cd44cf6b9946d",
+      "size": 13499
+    },
+    {
+      "url": "./assets/heroes_v3/bronn.png",
+      "label": "bronn.png",
+      "hash": "b888ac8018373370",
+      "size": 12856
+    },
+    {
+      "url": "./assets/heroes_v3/ember.png",
+      "label": "ember.png",
+      "hash": "9a2b8a7de89159ae",
+      "size": 13077
+    },
+    {
+      "url": "./assets/heroes_v3/faye.png",
+      "label": "faye.png",
+      "hash": "334757ef20ea94cf",
+      "size": 13865
+    },
+    {
+      "url": "./assets/heroes_v3/grom.png",
+      "label": "grom.png",
+      "hash": "d7f83b61c2f08fb5",
+      "size": 12869
+    },
+    {
+      "url": "./assets/heroes_v3/kira.png",
+      "label": "kira.png",
+      "hash": "76aa62015f3d1818",
+      "size": 13822
+    },
+    {
+      "url": "./assets/heroes_v3/lyra.png",
+      "label": "lyra.png",
+      "hash": "76576beb58abb0f2",
+      "size": 13624
+    },
+    {
+      "url": "./assets/heroes_v3/nami.png",
+      "label": "nami.png",
+      "hash": "94adb64b1cd8566c",
+      "size": 13472
+    },
+    {
+      "url": "./assets/heroes_v3/ronin.png",
+      "label": "ronin.png",
+      "hash": "ef8a12b8277e0fdf",
+      "size": 14178
+    },
+    {
+      "url": "./assets/heroes_v3/sora.png",
+      "label": "sora.png",
+      "hash": "d42a73dae9502232",
+      "size": 13617
+    },
+    {
+      "url": "./assets/icons/icon-192.png",
+      "label": "icon-192.png",
+      "hash": "a24bf59d8257ee76",
+      "size": 100370
+    },
+    {
+      "url": "./assets/icons/icon-512.png",
+      "label": "icon-512.png",
+      "hash": "4cf8d4f50bc243d7",
+      "size": 523456
+    },
+    {
+      "url": "./assets/items160/potion_hp.png",
+      "label": "potion_hp.png",
+      "hash": "c334ee91f21f31d7",
+      "size": 386
+    },
+    {
+      "url": "./assets/items160/potion_mp.png",
+      "label": "potion_mp.png",
+      "hash": "78c3d01535af1cdd",
+      "size": 394
+    },
+    {
+      "url": "./assets/items160/potion_ult.png",
+      "label": "potion_ult.png",
+      "hash": "25b5d417f6b2c620",
+      "size": 448
+    },
+    {
+      "url": "./assets/portraits/arcane.png",
+      "label": "arcane.png",
+      "hash": "887d0e4106a7bf8a",
+      "size": 1203
+    },
+    {
+      "url": "./assets/portraits/bronn.png",
+      "label": "bronn.png",
+      "hash": "6744cd8003e1a3a1",
+      "size": 1177
+    },
+    {
+      "url": "./assets/portraits/ember.png",
+      "label": "ember.png",
+      "hash": "3c24588191374810",
+      "size": 1172
+    },
+    {
+      "url": "./assets/portraits/faye.png",
+      "label": "faye.png",
+      "hash": "5d4025fa6145b38a",
+      "size": 1214
+    },
+    {
+      "url": "./assets/portraits/grom.png",
+      "label": "grom.png",
+      "hash": "5c38f531683c7493",
+      "size": 1160
+    },
+    {
+      "url": "./assets/portraits/kira.png",
+      "label": "kira.png",
+      "hash": "6b3147b423e91f7a",
+      "size": 1216
+    },
+    {
+      "url": "./assets/portraits/lyra.png",
+      "label": "lyra.png",
+      "hash": "962c5547dbec9fd2",
+      "size": 1198
+    },
+    {
+      "url": "./assets/portraits/nami.png",
+      "label": "nami.png",
+      "hash": "b816ea005a6be456",
+      "size": 1185
+    },
+    {
+      "url": "./assets/portraits/ronin.png",
+      "label": "ronin.png",
+      "hash": "347b2ce6feea7552",
+      "size": 1238
+    },
+    {
+      "url": "./assets/portraits/sora.png",
+      "label": "sora.png",
+      "hash": "4ac0b77c6c2eced8",
+      "size": 1215
+    },
+    {
+      "url": "./assets/portraits_costumes/arcane_classic.png",
+      "label": "arcane_classic.png",
+      "hash": "e01a22bcba603a28",
+      "size": 1218
+    },
+    {
+      "url": "./assets/portraits_costumes/arcane_ember.png",
+      "label": "arcane_ember.png",
+      "hash": "9b6ad8f54d009764",
+      "size": 1263
+    },
+    {
+      "url": "./assets/portraits_costumes/arcane_royal.png",
+      "label": "arcane_royal.png",
+      "hash": "e7f1321878a893bd",
+      "size": 1268
+    },
+    {
+      "url": "./assets/portraits_costumes/bronn_classic.png",
+      "label": "bronn_classic.png",
+      "hash": "bc190756e08a0bc0",
+      "size": 1187
+    },
+    {
+      "url": "./assets/portraits_costumes/bronn_ember.png",
+      "label": "bronn_ember.png",
+      "hash": "6967b59a78cde28c",
+      "size": 1235
+    },
+    {
+      "url": "./assets/portraits_costumes/bronn_royal.png",
+      "label": "bronn_royal.png",
+      "hash": "799073695d1f30e8",
+      "size": 1230
+    },
+    {
+      "url": "./assets/portraits_costumes/ember_classic.png",
+      "label": "ember_classic.png",
+      "hash": "b98dcab451b72eba",
+      "size": 1202
+    },
+    {
+      "url": "./assets/portraits_costumes/ember_ember.png",
+      "label": "ember_ember.png",
+      "hash": "352116b6b14c400c",
+      "size": 1214
+    },
+    {
+      "url": "./assets/portraits_costumes/ember_royal.png",
+      "label": "ember_royal.png",
+      "hash": "f63dfc07eed444f1",
+      "size": 1231
+    },
+    {
+      "url": "./assets/portraits_costumes/faye_classic.png",
+      "label": "faye_classic.png",
+      "hash": "e9dfdb4c6c77dc30",
+      "size": 1232
+    },
+    {
+      "url": "./assets/portraits_costumes/faye_ember.png",
+      "label": "faye_ember.png",
+      "hash": "53884201539751fc",
+      "size": 1324
+    },
+    {
+      "url": "./assets/portraits_costumes/faye_royal.png",
+      "label": "faye_royal.png",
+      "hash": "78ecde9e3a957e74",
+      "size": 1275
+    },
+    {
+      "url": "./assets/portraits_costumes/grom_classic.png",
+      "label": "grom_classic.png",
+      "hash": "71ea4c5beed1dc26",
+      "size": 1083
+    },
+    {
+      "url": "./assets/portraits_costumes/grom_ember.png",
+      "label": "grom_ember.png",
+      "hash": "868b961a65418093",
+      "size": 1245
+    },
+    {
+      "url": "./assets/portraits_costumes/grom_royal.png",
+      "label": "grom_royal.png",
+      "hash": "1f55846e0307e90d",
+      "size": 1244
+    },
+    {
+      "url": "./assets/portraits_costumes/kira_classic.png",
+      "label": "kira_classic.png",
+      "hash": "1d5a415be8307c83",
+      "size": 1243
+    },
+    {
+      "url": "./assets/portraits_costumes/kira_ember.png",
+      "label": "kira_ember.png",
+      "hash": "58499c0c4607afd4",
+      "size": 1301
+    },
+    {
+      "url": "./assets/portraits_costumes/kira_royal.png",
+      "label": "kira_royal.png",
+      "hash": "4875443f326c1d0a",
+      "size": 1283
+    },
+    {
+      "url": "./assets/portraits_costumes/lyra_classic.png",
+      "label": "lyra_classic.png",
+      "hash": "aa872daa9e08323c",
+      "size": 1233
+    },
+    {
+      "url": "./assets/portraits_costumes/lyra_ember.png",
+      "label": "lyra_ember.png",
+      "hash": "e6673b50b9f7a718",
+      "size": 1281
+    },
+    {
+      "url": "./assets/portraits_costumes/lyra_royal.png",
+      "label": "lyra_royal.png",
+      "hash": "3fd1d13aa5ed746d",
+      "size": 1282
+    },
+    {
+      "url": "./assets/portraits_costumes/nami_classic.png",
+      "label": "nami_classic.png",
+      "hash": "bc907d0cf90fd931",
+      "size": 1222
+    },
+    {
+      "url": "./assets/portraits_costumes/nami_ember.png",
+      "label": "nami_ember.png",
+      "hash": "01955da41f855263",
+      "size": 1280
+    },
+    {
+      "url": "./assets/portraits_costumes/nami_royal.png",
+      "label": "nami_royal.png",
+      "hash": "e19d616a58647f13",
+      "size": 1256
+    },
+    {
+      "url": "./assets/portraits_costumes/ronin_classic.png",
+      "label": "ronin_classic.png",
+      "hash": "213ed87ba47f1468",
+      "size": 1264
+    },
+    {
+      "url": "./assets/portraits_costumes/ronin_ember.png",
+      "label": "ronin_ember.png",
+      "hash": "11ff66e74272345d",
+      "size": 1309
+    },
+    {
+      "url": "./assets/portraits_costumes/ronin_royal.png",
+      "label": "ronin_royal.png",
+      "hash": "6890e130e544ed47",
+      "size": 1313
+    },
+    {
+      "url": "./assets/portraits_costumes/sora_classic.png",
+      "label": "sora_classic.png",
+      "hash": "046cc9b1c4beed60",
+      "size": 1078
+    },
+    {
+      "url": "./assets/portraits_costumes/sora_ember.png",
+      "label": "sora_ember.png",
+      "hash": "38fb9a6a16ce563b",
+      "size": 1192
+    },
+    {
+      "url": "./assets/portraits_costumes/sora_royal.png",
+      "label": "sora_royal.png",
+      "hash": "3626fe99393aecd1",
+      "size": 1138
+    },
+    {
+      "url": "./assets/stages/bamboo_ruins.png",
+      "label": "bamboo_ruins.png",
+      "hash": "5cca2c8173451b34",
+      "size": 7540
+    },
+    {
+      "url": "./assets/stages/crimson_fort.png",
+      "label": "crimson_fort.png",
+      "hash": "ab261fa7db141a62",
+      "size": 6215
+    },
+    {
+      "url": "./assets/stages/neon_alley.png",
+      "label": "neon_alley.png",
+      "hash": "63141f1b5ec5cca8",
+      "size": 5876
+    },
+    {
+      "url": "./assets/stages/void_temple.png",
+      "label": "void_temple.png",
+      "hash": "36cf3ab52b23e65c",
+      "size": 7591
+    },
+    {
+      "url": "./assets/ui160/hero_reference.webp",
+      "label": "hero_reference.webp",
+      "hash": "d6e9c3ecaf180685",
+      "size": 28892
+    },
+    {
+      "url": "./assets/ui160/monster_reference.webp",
+      "label": "monster_reference.webp",
+      "hash": "c6dfc6858e6df19f",
+      "size": 20508
+    },
+    {
+      "url": "./assets/ui160/skill_reference.webp",
+      "label": "skill_reference.webp",
+      "hash": "3c306d127735dda1",
+      "size": 32470
+    },
+    {
+      "url": "./assets/weapons/axe.png",
+      "label": "axe.png",
+      "hash": "f72fcba4c67a7206",
+      "size": 791
+    },
+    {
+      "url": "./assets/weapons/boomerang.png",
+      "label": "boomerang.png",
+      "hash": "e5fe0955c4de3978",
+      "size": 1057
+    },
+    {
+      "url": "./assets/weapons/bow.png",
+      "label": "bow.png",
+      "hash": "3465b0ac4a80ec48",
+      "size": 926
+    },
+    {
+      "url": "./assets/weapons/chakram.png",
+      "label": "chakram.png",
+      "hash": "54e4dd77137faeea",
+      "size": 1157
+    },
+    {
+      "url": "./assets/weapons/dualblades.png",
+      "label": "dualblades.png",
+      "hash": "9248677ad4efd3dd",
+      "size": 861
+    },
+    {
+      "url": "./assets/weapons/gauntlet.png",
+      "label": "gauntlet.png",
+      "hash": "7d3c9ff95bff8f16",
+      "size": 475
+    },
+    {
+      "url": "./assets/weapons/greatsword.png",
+      "label": "greatsword.png",
+      "hash": "2874cf86fcca3792",
+      "size": 777
+    },
+    {
+      "url": "./assets/weapons/halberd.png",
+      "label": "halberd.png",
+      "hash": "a6049c6c993d5b26",
+      "size": 910
+    },
+    {
+      "url": "./assets/weapons/hammer.png",
+      "label": "hammer.png",
+      "hash": "97311546e14444ef",
+      "size": 431
+    },
+    {
+      "url": "./assets/weapons/katana.png",
+      "label": "katana.png",
+      "hash": "05607def42b2bac2",
+      "size": 687
+    },
+    {
+      "url": "./assets/weapons/shieldblade.png",
+      "label": "shieldblade.png",
+      "hash": "55cb038105449d1b",
+      "size": 839
+    },
+    {
+      "url": "./assets/weapons/spear.png",
+      "label": "spear.png",
+      "hash": "fe898dcdec45e2fc",
+      "size": 895
+    },
+    {
+      "url": "./assets/weapons/staff.png",
+      "label": "staff.png",
+      "hash": "1433a3660fdee59f",
+      "size": 872
+    },
+    {
+      "url": "./assets/weapons/wand.png",
+      "label": "wand.png",
+      "hash": "f22bf2a83f144bff",
+      "size": 904
+    },
+    {
+      "url": "./manifest.webmanifest",
+      "label": "manifest.webmanifest",
+      "hash": "91126e39b9ce33e6",
+      "size": 498
+    }
+  ]
+}
