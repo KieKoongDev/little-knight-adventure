@@ -15,17 +15,22 @@ function code() {
   return s;
 }
 function id() { return Math.random().toString(36).slice(2,10); }
-function send(ws,obj){ if(ws.readyState===1) ws.send(JSON.stringify(obj)); }
+function send(ws,obj){ if(ws.readyState===1&&ws.bufferedAmount<262144) ws.send(JSON.stringify(obj)); }
 function roomPlayers(room){
   return [...room.players.values()].map(p=>({playerId:p.id,name:p.name,hero:p.hero,isHost:p.id===room.hostId,ready:!!p.ready}));
 }
 function broadcast(room,obj,except=null){
-  for(const p of room.players.values()) if(p.ws!==except) send(p.ws,obj);
+  const raw=JSON.stringify(obj);
+  for(const p of room.players.values()){
+    const ws=p.ws;if(ws===except||!ws||ws.readyState!==1)continue;
+    if(ws.bufferedAmount>262144)continue;
+    ws.send(raw)
+  }
 }
 function broadcastPlayers(room){ broadcast(room,{type:"room_players",players:roomPlayers(room)}); }
 
 const server = http.createServer((req,res)=>{
-  if(req.url==="/health"){res.writeHead(200,{"content-type":"application/json","cache-control":"no-store","access-control-allow-origin":"*"});return res.end(JSON.stringify({ok:true,rooms:rooms.size,version:"1.9.2"}))}
+  if(req.url==="/health"){res.writeHead(200,{"content-type":"application/json","cache-control":"no-store","access-control-allow-origin":"*"});return res.end(JSON.stringify({ok:true,rooms:rooms.size,version:"2.0.0"}))}
   let pathname = decodeURIComponent(req.url.split("?")[0]);
   if(pathname==="/") pathname="/index.html";
   const file=path.normalize(path.join(ROOT,pathname));

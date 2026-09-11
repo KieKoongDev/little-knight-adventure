@@ -4,7 +4,7 @@ const GAME_BOOT = (() => {
   const DB_VERSION = 1;
   const STORE = "meta";
   const CACHE_PREFIX = "little-knight-assets-";
-  const CORE_CACHE = "little-knight-core-v1.9.2";
+  const CORE_CACHE = "little-knight-core-v2.0.0";
   let db = null;
 
   const $b = id => document.getElementById(id);

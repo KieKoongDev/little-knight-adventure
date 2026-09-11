@@ -363,3 +363,10 @@ button{border-radius:10px;text-shadow:0 2px 0 #0006}
 .online-auto-row>div{display:flex;flex-direction:column;text-align:left;gap:2px}
 .online-auto-row b{font-size:9px}.online-auto-row span{font-size:7px;color:#aeb5bd}
 .online-auto-row button{font-size:7px}
+
+/* v2.0 visual pass */
+.hud{filter:drop-shadow(0 4px 10px rgba(0,0,0,.42))}
+.center-status b{letter-spacing:.08em;text-shadow:0 2px 8px #000}
+.hero-info,.center-status,.top-actions button{backdrop-filter:blur(2px)}
+.simple-pad .action{border-color:rgba(255,255,255,.30)!important}
+.simple-pad .attack:active,.simple-pad .skill:active{box-shadow:0 0 20px rgba(255,226,174,.22)!important}

@@ -1,70 +1,36 @@
-# อัศวินจิ๋วผจญภัย v1.9.2 — Deploy Ready Online
+# อัศวินจิ๋วผจญภัย v2.0.0 — Combat Fix + Aggressive Visual Pass
 
-เวอร์ชันนี้ทำมาเพื่อแก้ปัญหา Static hosting ไม่มี WebSocket โดยตรง
+## Critical fixes
+- Enemy death no longer blocks stage clear.
+- Dead enemies get independent `deathTime` and are forcibly removed after ~0.92s.
+- Stage clear checks `all enemies dead/remove`, not raw array length.
+- Remote snapshots prune dead enemies safely.
 
-## วิธีที่แนะนำ: Deploy ทั้งเกมเป็น Node App ตัวเดียว
-เมื่อ deploy แล้ว URL เดียวทำทุกอย่าง:
-- หน้าเกม
-- Assets
-- `/health`
-- WebSocket `/ws`
-- Create Room
-- Join Room
-- Invite Link
+## Network / Ping
+- Player state ~18Hz -> ~12Hz.
+- World snapshot 10Hz -> ~5.5Hz.
+- Ping probe every 5s instead of 2.5s.
+- Enemy snapshots now carry stable IDs.
+- Remote enemies merge + interpolate instead of replacing the whole array.
+- Server skips clients with large WebSocket bufferedAmount to avoid message queue buildup.
+- Server serializes broadcasts once per message.
 
-ผู้เล่นไม่ต้องกรอก Game Server URL
+## Visual / Action
+- Heavier multi-layer weapon trails.
+- Motion-smear weapon overlay.
+- Stronger heavy weapon dust/shock.
+- Enemy attack telegraphs: melee cone / ranged line.
+- Enemy death burst + dissolve / shard particles.
+- Cinematic vignette/color grade.
+- Boss red atmosphere.
+- More weight on third combo attack.
+- Landing dust and stronger hit-stop.
 
-## Local
-```bash
-npm install
-npm start
-```
-เปิด:
-`http://localhost:8081`
+## Music
+- Master 0.88
+- Music 0.60
+- Drums / bass / lead raised
+- Dynamic intensity remains active.
 
-Health:
-`http://localhost:8081/health`
-
-WebSocket:
-`ws://localhost:8081/ws`
-
-## Render
-โปรเจกต์มี `render.yaml` แล้ว
-
-1. แตก ZIP แล้ว push ขึ้น GitHub
-2. Render → New → Blueprint
-3. เลือก repository
-4. Render อ่าน `render.yaml`
-5. Deploy
-6. เปิด URL ที่ Render ให้มา
-
-เกมจะใช้:
-`wss://<render-domain>/ws`
-อัตโนมัติ
-
-## Railway
-มี `Dockerfile` และ `railway.json`
-
-1. Push repository
-2. Railway → New Project → Deploy from GitHub
-3. Generate Domain
-4. เปิด domain
-
-เกมจะ infer WebSocket จาก domain เดียวกันอัตโนมัติ
-
-## Docker / VPS / EC2
-```bash
-docker build -t little-knight .
-docker run -p 8081:8081 -e PORT=8081 little-knight
-```
-
-แล้ว reverse proxy HTTPS มาที่ port 8081
-
-## Netlify เดิม
-Netlify static ยังใช้เล่น Solo ได้ แต่ไม่ควรเป็น URL หลักสำหรับ Online build นี้
-สำหรับ Create Room ให้เปิดเกมจาก Render/Railway/Node URL แทน
-
-## UX
-ช่อง Game Server ถูกซ่อนไว้เป็น Advanced Setting
-ค่า default คือโดเมนเดียวกับเกม เช่น:
-`https://game.example.com` → `wss://game.example.com/ws`
+## Concept
+`concept/v2_aggressive_art_direction.webp` is the visual direction reference for future unique hand-authored hero/enemy/weapon sprite sheets.
