@@ -1,8 +1,8 @@
 {
   "game": "อัศวินจิ๋วผจญภัย",
-  "version": "2.0.0",
+  "version": "2.2.0",
   "minClientVersion": "1.3.0",
-  "totalSize": 1724212,
+  "totalSize": 12530042,
   "assets": [
     {
       "url": "./assets/ai/title_art.png",
@@ -35,6 +35,30 @@
       "size": 7030
     },
     {
+      "url": "./assets/bosses_hd/oni_beast.png",
+      "label": "oni_beast.png",
+      "hash": "a32b915f60efe5d8",
+      "size": 85580
+    },
+    {
+      "url": "./assets/bosses_hd/stone_titan.png",
+      "label": "stone_titan.png",
+      "hash": "7050a46c0e29bd08",
+      "size": 66449
+    },
+    {
+      "url": "./assets/bosses_hd/void_colossus.png",
+      "label": "void_colossus.png",
+      "hash": "ee9e0dc5ec912559",
+      "size": 145010
+    },
+    {
+      "url": "./assets/bosses_hd/wyrm.png",
+      "label": "wyrm.png",
+      "hash": "de44581c85f41ba1",
+      "size": 95656
+    },
+    {
       "url": "./assets/enemies/boss.png",
       "label": "boss.png",
       "hash": "30dcf316949733ff",
@@ -63,6 +87,72 @@
       "label": "rogue.png",
       "hash": "5f467ca6a97519f3",
       "size": 2266
+    },
+    {
+      "url": "./assets/enemies_hd/archer.png",
+      "label": "archer.png",
+      "hash": "ddfb73777aa179a1",
+      "size": 93453
+    },
+    {
+      "url": "./assets/enemies_hd/beast.png",
+      "label": "beast.png",
+      "hash": "3db4bbfd37912a0c",
+      "size": 65328
+    },
+    {
+      "url": "./assets/enemies_hd/brute.png",
+      "label": "brute.png",
+      "hash": "0078028b9a5b75a1",
+      "size": 56477
+    },
+    {
+      "url": "./assets/enemies_hd/crawler.png",
+      "label": "crawler.png",
+      "hash": "f3fdf93a7df55259",
+      "size": 62841
+    },
+    {
+      "url": "./assets/enemies_hd/grunt.png",
+      "label": "grunt.png",
+      "hash": "e405953490008463",
+      "size": 56550
+    },
+    {
+      "url": "./assets/enemies_hd/mage.png",
+      "label": "mage.png",
+      "hash": "7a1ce583ac0d1368",
+      "size": 65360
+    },
+    {
+      "url": "./assets/enemies_hd/rogue.png",
+      "label": "rogue.png",
+      "hash": "634846f46d8ab8e0",
+      "size": 55280
+    },
+    {
+      "url": "./assets/enemies_hd/shield.png",
+      "label": "shield.png",
+      "hash": "8b02fe7b1eda196f",
+      "size": 79065
+    },
+    {
+      "url": "./assets/enemies_hd/spearman.png",
+      "label": "spearman.png",
+      "hash": "7f61b6e136f314f4",
+      "size": 56993
+    },
+    {
+      "url": "./assets/enemies_hd/warden.png",
+      "label": "warden.png",
+      "hash": "ad9135c4de4d272d",
+      "size": 78900
+    },
+    {
+      "url": "./assets/enemies_hd/warlock.png",
+      "label": "warlock.png",
+      "hash": "ef1936378c86df69",
+      "size": 64631
     },
     {
       "url": "./assets/enemies_v2/archer.png",
@@ -327,6 +417,186 @@
       "label": "sora_royal.png",
       "hash": "3e86a68de8e4c7de",
       "size": 15766
+    },
+    {
+      "url": "./assets/heroes_hd/arcane_classic.png",
+      "label": "arcane_classic.png",
+      "hash": "5d8edf7bea9eceb9",
+      "size": 223550
+    },
+    {
+      "url": "./assets/heroes_hd/arcane_ember.png",
+      "label": "arcane_ember.png",
+      "hash": "ecfbe22f47872b42",
+      "size": 294094
+    },
+    {
+      "url": "./assets/heroes_hd/arcane_royal.png",
+      "label": "arcane_royal.png",
+      "hash": "29c71d578b4d3895",
+      "size": 303138
+    },
+    {
+      "url": "./assets/heroes_hd/bronn_classic.png",
+      "label": "bronn_classic.png",
+      "hash": "d1eb96c361a4390a",
+      "size": 213412
+    },
+    {
+      "url": "./assets/heroes_hd/bronn_ember.png",
+      "label": "bronn_ember.png",
+      "hash": "bdf34e2aca14931c",
+      "size": 277793
+    },
+    {
+      "url": "./assets/heroes_hd/bronn_royal.png",
+      "label": "bronn_royal.png",
+      "hash": "33be3cb4752a410d",
+      "size": 299451
+    },
+    {
+      "url": "./assets/heroes_hd/ember_classic.png",
+      "label": "ember_classic.png",
+      "hash": "f73aa68596d37a10",
+      "size": 205563
+    },
+    {
+      "url": "./assets/heroes_hd/ember_ember.png",
+      "label": "ember_ember.png",
+      "hash": "0dc1315eccff0585",
+      "size": 257841
+    },
+    {
+      "url": "./assets/heroes_hd/ember_royal.png",
+      "label": "ember_royal.png",
+      "hash": "2cd4b29901083620",
+      "size": 299030
+    },
+    {
+      "url": "./assets/heroes_hd/faye_classic.png",
+      "label": "faye_classic.png",
+      "hash": "854516cfd1f9107b",
+      "size": 234345
+    },
+    {
+      "url": "./assets/heroes_hd/faye_ember.png",
+      "label": "faye_ember.png",
+      "hash": "82b84e24294a0bfc",
+      "size": 296330
+    },
+    {
+      "url": "./assets/heroes_hd/faye_royal.png",
+      "label": "faye_royal.png",
+      "hash": "243e507ae39268db",
+      "size": 324835
+    },
+    {
+      "url": "./assets/heroes_hd/grom_classic.png",
+      "label": "grom_classic.png",
+      "hash": "f06374e26b308a9f",
+      "size": 211754
+    },
+    {
+      "url": "./assets/heroes_hd/grom_ember.png",
+      "label": "grom_ember.png",
+      "hash": "87380fbf54d3580e",
+      "size": 264403
+    },
+    {
+      "url": "./assets/heroes_hd/grom_royal.png",
+      "label": "grom_royal.png",
+      "hash": "7dcbff3783ade920",
+      "size": 300839
+    },
+    {
+      "url": "./assets/heroes_hd/kira_classic.png",
+      "label": "kira_classic.png",
+      "hash": "260f6234f9583c51",
+      "size": 223906
+    },
+    {
+      "url": "./assets/heroes_hd/kira_ember.png",
+      "label": "kira_ember.png",
+      "hash": "c86f933d45dd7269",
+      "size": 286285
+    },
+    {
+      "url": "./assets/heroes_hd/kira_royal.png",
+      "label": "kira_royal.png",
+      "hash": "8db673446ef6331f",
+      "size": 311853
+    },
+    {
+      "url": "./assets/heroes_hd/lyra_classic.png",
+      "label": "lyra_classic.png",
+      "hash": "b0522a6a9a4898c3",
+      "size": 228937
+    },
+    {
+      "url": "./assets/heroes_hd/lyra_ember.png",
+      "label": "lyra_ember.png",
+      "hash": "cc47e743c148b873",
+      "size": 283910
+    },
+    {
+      "url": "./assets/heroes_hd/lyra_royal.png",
+      "label": "lyra_royal.png",
+      "hash": "04bf9d5bdaec0f8e",
+      "size": 319660
+    },
+    {
+      "url": "./assets/heroes_hd/nami_classic.png",
+      "label": "nami_classic.png",
+      "hash": "8e95bd9324b53af0",
+      "size": 229292
+    },
+    {
+      "url": "./assets/heroes_hd/nami_ember.png",
+      "label": "nami_ember.png",
+      "hash": "7298747f9eaa3564",
+      "size": 300489
+    },
+    {
+      "url": "./assets/heroes_hd/nami_royal.png",
+      "label": "nami_royal.png",
+      "hash": "09a743c8b364568a",
+      "size": 309706
+    },
+    {
+      "url": "./assets/heroes_hd/ronin_classic.png",
+      "label": "ronin_classic.png",
+      "hash": "92782f41de05d5ca",
+      "size": 214425
+    },
+    {
+      "url": "./assets/heroes_hd/ronin_ember.png",
+      "label": "ronin_ember.png",
+      "hash": "2798fb7b4fa310bc",
+      "size": 284420
+    },
+    {
+      "url": "./assets/heroes_hd/ronin_royal.png",
+      "label": "ronin_royal.png",
+      "hash": "54b96d7593a891cc",
+      "size": 296876
+    },
+    {
+      "url": "./assets/heroes_hd/sora_classic.png",
+      "label": "sora_classic.png",
+      "hash": "b59653b13ba59f7b",
+      "size": 240380
+    },
+    {
+      "url": "./assets/heroes_hd/sora_ember.png",
+      "label": "sora_ember.png",
+      "hash": "71d6c754c9051997",
+      "size": 296260
+    },
+    {
+      "url": "./assets/heroes_hd/sora_royal.png",
+      "label": "sora_royal.png",
+      "hash": "78fbf9849cb79473",
+      "size": 320230
     },
     {
       "url": "./assets/heroes_v2/arcane.png",
@@ -719,6 +989,30 @@
       "size": 7591
     },
     {
+      "url": "./assets/stages_hd/bamboo_ruins.png",
+      "label": "bamboo_ruins.png",
+      "hash": "eb2c0120d3eb965a",
+      "size": 382542
+    },
+    {
+      "url": "./assets/stages_hd/crimson_fort.png",
+      "label": "crimson_fort.png",
+      "hash": "492ea318cca4a870",
+      "size": 297557
+    },
+    {
+      "url": "./assets/stages_hd/neon_alley.png",
+      "label": "neon_alley.png",
+      "hash": "5502a58db4705147",
+      "size": 288550
+    },
+    {
+      "url": "./assets/stages_hd/void_temple.png",
+      "label": "void_temple.png",
+      "hash": "f8b1c90d2ca1b077",
+      "size": 289155
+    },
+    {
       "url": "./assets/ui160/hero_reference.webp",
       "label": "hero_reference.webp",
       "hash": "d6e9c3ecaf180685",
@@ -819,6 +1113,96 @@
       "label": "wand.png",
       "hash": "f22bf2a83f144bff",
       "size": 904
+    },
+    {
+      "url": "./assets/weapons_hd/axe.png",
+      "label": "axe.png",
+      "hash": "93396152e59517dd",
+      "size": 10049
+    },
+    {
+      "url": "./assets/weapons_hd/boomerang.png",
+      "label": "boomerang.png",
+      "hash": "31ecebec55f66745",
+      "size": 16240
+    },
+    {
+      "url": "./assets/weapons_hd/bow.png",
+      "label": "bow.png",
+      "hash": "6bc9b15a47148e00",
+      "size": 11657
+    },
+    {
+      "url": "./assets/weapons_hd/chakram.png",
+      "label": "chakram.png",
+      "hash": "06d1aee067ce8a7d",
+      "size": 20974
+    },
+    {
+      "url": "./assets/weapons_hd/dualblades.png",
+      "label": "dualblades.png",
+      "hash": "10b82dde1abaa400",
+      "size": 11853
+    },
+    {
+      "url": "./assets/weapons_hd/gauntlet.png",
+      "label": "gauntlet.png",
+      "hash": "0b69fd309be62e63",
+      "size": 4345
+    },
+    {
+      "url": "./assets/weapons_hd/greatsword.png",
+      "label": "greatsword.png",
+      "hash": "7e1de1cfc12a9b39",
+      "size": 10333
+    },
+    {
+      "url": "./assets/weapons_hd/halberd.png",
+      "label": "halberd.png",
+      "hash": "e4e43a5b40aa3695",
+      "size": 9591
+    },
+    {
+      "url": "./assets/weapons_hd/hammer.png",
+      "label": "hammer.png",
+      "hash": "8c78c9799dc22e13",
+      "size": 3387
+    },
+    {
+      "url": "./assets/weapons_hd/katana.png",
+      "label": "katana.png",
+      "hash": "ee8e90548bc3304c",
+      "size": 8197
+    },
+    {
+      "url": "./assets/weapons_hd/shieldblade.png",
+      "label": "shieldblade.png",
+      "hash": "514e59a49ad0300c",
+      "size": 10481
+    },
+    {
+      "url": "./assets/weapons_hd/spear.png",
+      "label": "spear.png",
+      "hash": "36ea5a5e71c97a6a",
+      "size": 11787
+    },
+    {
+      "url": "./assets/weapons_hd/staff.png",
+      "label": "staff.png",
+      "hash": "47a6df01f127381c",
+      "size": 13160
+    },
+    {
+      "url": "./assets/weapons_hd/wand.png",
+      "label": "wand.png",
+      "hash": "41c44ee3f8f38891",
+      "size": 13316
+    },
+    {
+      "url": "./concept/v2_aggressive_art_direction.webp",
+      "label": "v2_aggressive_art_direction.webp",
+      "hash": "de66b96d668b6159",
+      "size": 112076
     },
     {
       "url": "./manifest.webmanifest",

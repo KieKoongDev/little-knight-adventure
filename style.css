@@ -370,3 +370,17 @@ button{border-radius:10px;text-shadow:0 2px 0 #0006}
 .hero-info,.center-status,.top-actions button{backdrop-filter:blur(2px)}
 .simple-pad .action{border-color:rgba(255,255,255,.30)!important}
 .simple-pad .attack:active,.simple-pad .skill:active{box-shadow:0 0 20px rgba(255,226,174,.22)!important}
+
+/* v2.1 HD cinematic */
+:root{--gold:#e2b86e;--ember:#ff6e45;--ink:#080b12;--panel:rgba(8,11,18,.84)}
+body{background:radial-gradient(circle at 50% 15%,#182033 0,#090c14 42%,#05070c 100%)}
+#game{image-rendering:auto;filter:contrast(1.04) saturate(1.08)}
+.hud{filter:drop-shadow(0 6px 14px rgba(0,0,0,.65))}
+.hero-info,.center-status,.coop-hud,.rest-banner{background:linear-gradient(180deg,rgba(12,15,24,.88),rgba(6,8,13,.74))!important;border-color:rgba(226,184,110,.26)!important;box-shadow:inset 0 1px rgba(255,255,255,.05),0 10px 30px rgba(0,0,0,.34)!important}
+.center-status b,.hero-info b{color:#f1d29a;text-shadow:0 2px 8px #000}
+.simple-pad .action{background:radial-gradient(circle at 45% 35%,rgba(255,255,255,.10),rgba(15,18,26,.12))!important;border:1px solid rgba(236,214,174,.34)!important;box-shadow:inset 0 0 18px rgba(255,255,255,.035),0 5px 20px rgba(0,0,0,.20)!important}
+.simple-pad .attack:active,.simple-pad .skill:active{transform:scale(.94)!important;box-shadow:0 0 26px rgba(255,126,70,.30)!important}
+
+/* v2.2 cinematic actor render */
+#game{filter:contrast(1.06) saturate(1.10) brightness(.98)}
+.game-wrap:after{content:"";pointer-events:none;position:absolute;inset:0;box-shadow:inset 0 0 95px rgba(0,0,0,.36)}
