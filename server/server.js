@@ -30,7 +30,7 @@ function broadcast(room,obj,except=null){
 function broadcastPlayers(room){ broadcast(room,{type:"room_players",players:roomPlayers(room)}); }
 
 const server = http.createServer((req,res)=>{
-  if(req.url==="/health"){res.writeHead(200,{"content-type":"application/json","cache-control":"no-store","access-control-allow-origin":"*"});return res.end(JSON.stringify({ok:true,rooms:rooms.size,version:"2.3.0"}))}
+  if(req.url==="/health"){res.writeHead(200,{"content-type":"application/json","cache-control":"no-store","access-control-allow-origin":"*"});return res.end(JSON.stringify({ok:true,rooms:rooms.size,version:"2.4.0"}))}
   let pathname = decodeURIComponent(req.url.split("?")[0]);
   if(pathname==="/") pathname="/index.html";
   const file=path.normalize(path.join(ROOT,pathname));
@@ -85,6 +85,7 @@ wss.on("connection",ws=>{
       }
       else if(m.type==="player_state"){p.state=m.state;broadcast(room,{type:"peer_state",playerId:p.id,state:m.state},ws)}
       else if(m.type==="world_snapshot"&&room.hostId===p.id){room.lastWorld=m.world;broadcast(room,{type:"world_snapshot",world:m.world},ws)}
+      else if(m.type==="encounter_event"&&room.hostId===p.id){broadcast(room,{type:"encounter_event",event:m.event},ws)}
       else if(m.type==="combat_action"){
         const host=room.players.get(room.hostId);if(host&&host.id!==p.id)send(host.ws,{type:"remote_action",playerId:p.id,action:m.action})
       } else if(m.type==="shared_loot_spawn"&&room.hostId===p.id){

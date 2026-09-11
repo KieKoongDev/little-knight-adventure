@@ -392,3 +392,12 @@ body{background:radial-gradient(circle at 50% 15%,#182033 0,#090c14 42%,#05070c 
 .stat.armor i{background:linear-gradient(90deg,#79899a,#d7e1eb 60%,#fff)}
 .action.charging{transform:scale(.96);border-color:rgba(255,221,135,.9)!important;box-shadow:0 0 28px rgba(255,155,70,.38)!important}
 .action.charging:after{content:"CHARGE";position:absolute;top:-18px;left:50%;transform:translateX(-50%);font:700 8px Arial;letter-spacing:.12em;color:#ffd896;text-shadow:0 2px 5px #000}
+
+#encounterHint{position:absolute;top:84px;left:50%;transform:translateX(-50%);z-index:12;max-width:80%;padding:7px 16px;border-radius:8px;background:rgba(12,17,28,.9);color:#ffe7bb;font:700 clamp(11px,1.4vw,16px) Tahoma;text-align:center;pointer-events:none}
+#encounterHint:empty{display:none}.combat-help{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);color:#b7c8df;font:10px Tahoma;pointer-events:none;white-space:nowrap}
+@media(max-width:700px){#encounterHint{top:62px}.combat-help{font-size:8px;bottom:3px}}
+.character-preview{display:block;width:100%;height:100px;object-fit:contain;background:#101720;border-radius:6px}
+@media(max-height:600px){.character-preview{height:68px}}
+/* Preserve body proportions on every screen instead of stretching the arena. */
+#gameWrap{width:min(100vw,177.7778vh);height:min(100vh,56.25vw);flex-shrink:0;overflow:hidden}
+.character-preview{image-rendering:auto}

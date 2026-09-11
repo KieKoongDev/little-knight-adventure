@@ -1,8 +1,8 @@
 {
   "game": "อัศวินจิ๋วผจญภัย",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "minClientVersion": "1.3.0",
-  "totalSize": 16053402,
+  "totalSize": 16254653,
   "assets": [
     {
       "url": "./assets/ai/title_art.png",
@@ -1227,6 +1227,42 @@
       "label": "manifest.webmanifest",
       "hash": "91126e39b9ce33e6",
       "size": 498
+    },
+    {
+      "url": "./game.js",
+      "label": "game.js",
+      "size": 137809,
+      "hash": "615783b7442795ec"
+    },
+    {
+      "url": "./hero-renderer.js",
+      "label": "hero-renderer.js",
+      "size": 8205,
+      "hash": "d2081ac156b58c94"
+    },
+    {
+      "url": "./combat.js",
+      "label": "combat.js",
+      "size": 8188,
+      "hash": "513e7e86dd61d839"
+    },
+    {
+      "url": "./style.css",
+      "label": "style.css",
+      "size": 37608,
+      "hash": "5fbb6ac6c77a141c"
+    },
+    {
+      "url": "./bootstrap.js",
+      "label": "bootstrap.js",
+      "size": 6100,
+      "hash": "ce9335a1c81752e6"
+    },
+    {
+      "url": "./ground.js",
+      "label": "ground.js",
+      "size": 3341,
+      "hash": "5e39d2773939c523"
     }
   ]
 }

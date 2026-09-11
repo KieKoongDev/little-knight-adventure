@@ -1,0 +1,30 @@
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
+(async()=>{
+ const browser=await chromium.launch({headless:true,channel:"chrome"});const context=await browser.newContext({viewport:{width:1440,height:1000}});const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto('http://127.0.0.1:8081');await page.waitForFunction(()=>typeof renderCharacter==='function');await page.evaluate(()=>window.GAME_BOOT.ready);await page.waitForSelector('#bootScreen',{state:'detached'});await page.screenshot({path:'../selection.png'});
+ await page.evaluate(async()=>{selectedMode='bossrush';await startGame();});await page.waitForTimeout(500);
+ await page.evaluate(()=>{running=false;player.x=460;player.y=480;enemies[0].x=850;enemies[0].y=460;draw()});await page.screenshot({path:'../gameplay.png'});
+ const checks=await page.evaluate(()=>{
+  const out={};player.x=50;player.y=100;constrainToGround(player);out.ground=player.y>=groundEdge(player.x)+24;out.cards=document.querySelectorAll('.character-preview').length===10;
+  player.hp=player.maxHp;running=true;startGuard();guardPointer=true;update(.016);out.touchGuard=blocking;guardPointer=false;stopGuard();
+  dash();const x=player.x;updateCombat(.1);out.dash=player.x!==x&&player.invuln>0;
+  const b=makeBoss(0);enemies=[b];b.attackCd=0;updateBossEncounter(b,.016);out.bossWarning=b.cast?.left>1;
+  b.cast={kind:'break',breakLeft:1,breakMax:1,left:2};damageEnemy(b,10,0,true);out.interrupt=!b.cast&&b.recovery>3;
+  player.armor=0;useTacticalItem({type:'repair'});out.repair=player.armor===player.maxArmor;
+  player.invuln=0;player.z=0;player.dashTime=0;const hp=player.hp;receiveEncounterEvent({kind:'hit',x:player.x,y:player.y,rx:100,ry:100,dmg:10});out.hazardHits=player.hp<hp;
+  player.invuln=0;player.z=90;const hp2=player.hp;receiveEncounterEvent({kind:'hit',x:player.x,y:player.y,rx:100,ry:100,dmg:10});out.jumpAvoids=player.hp===hp2;
+  running=false;return out;
+ });
+ const peer=await page.context().newPage();peer.on('pageerror',e=>errors.push(e.message));await peer.goto('http://127.0.0.1:8081');await peer.evaluate(()=>window.GAME_BOOT.ready);
+ await page.evaluate(async()=>{await NET.connect('ws://127.0.0.1:8081/ws');NET.send('create_room',{hero:'ronin'})});await page.waitForFunction(()=>NET.enabled);
+ const code=await page.evaluate(()=>NET.roomCode);
+ await peer.evaluate(async code=>{await NET.connect('ws://127.0.0.1:8081/ws');NET.send('join_room',{roomCode:code,hero:'nami'})},code);await peer.waitForFunction(()=>NET.enabled);
+ await peer.evaluate(()=>NET.send('set_ready',{ready:true}));await page.waitForTimeout(100);await page.evaluate(()=>NET.send('start_match'));await peer.waitForFunction(()=>running&&player);await page.waitForTimeout(400);
+ await peer.evaluate(()=>{running=false;player.x=600;player.y=500;player.z=0;player.invuln=0;player.armor=0;player.hp=100});
+ await page.evaluate(()=>{running=false;sendEncounterEvent({kind:'hit',x:600,y:500,rx:100,ry:100,dmg:20})});await page.waitForTimeout(120);
+ checks.coopGuestDamage=await peer.evaluate(()=>player.hp===80);
+ await page.evaluate(()=>NET.send('support_pulse',{amount:15}));await page.waitForTimeout(100);checks.coopHeal=await peer.evaluate(()=>player.hp===95);
+ await peer.evaluate(()=>NET.send('encounter_event',{event:{kind:'hit',x:0,y:0,rx:9999,ry:9999,dmg:999}}));const hostHp=await page.evaluate(()=>player.hp);await page.waitForTimeout(100);checks.hostOnlyHazards=await page.evaluate(hp=>player.hp===hp,hostHp);
+ await peer.evaluate(()=>{NET.peers.clear();NET.onMessage({type:'peer_state',playerId:'test',state:{x:100,y:500,z:0,hp:100}});NET.onMessage({type:'peer_state',playerId:'test',state:{x:200,y:500,z:0,hp:100}})});checks.interpolation=await peer.evaluate(()=>NET.peers.get('test').x===100&&NET.peers.get('test').tx===200);
+ await page.setViewportSize({width:844,height:390});await page.evaluate(()=>{running=true;player.dead=false;player.downed=false;player.z=0;player.hp=100;player.invuln=0;guardPointer=false;blocking=false;setState(player,'idle',true)});const box=await page.locator('#blockBtn').boundingBox();await page.mouse.move(box.x+box.width/2,box.y+box.height/2);await page.mouse.down();await page.evaluate(()=>update(.016));checks.mobilePointerGuard=await page.evaluate(()=>blocking);await page.mouse.up();checks.mobilePointerRelease=await page.evaluate(()=>!blocking);checks.aspectRatio=await page.evaluate(()=>{const r=canvas.getBoundingClientRect();return Math.abs(r.width/r.height-1280/720)<.001});await page.evaluate(()=>{running=false;constrainWorld();draw()});await page.screenshot({path:'../mobile.png'});console.log(JSON.stringify({checks,errors}));await browser.close();if(errors.length||Object.values(checks).some(v=>!v))process.exitCode=1;
+})().catch(e=>{console.error(e);process.exit(1)});

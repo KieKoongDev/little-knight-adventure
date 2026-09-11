@@ -1,5 +1,5 @@
-const CORE="little-knight-core-v2.3.0";
-const CORE_ASSETS=["./","./index.html","./style.css?v=2.3.0","./bootstrap.js?v=2.3.0","./three-effects.js?v=2.3.0","./game.js?v=2.3.0","./manifest.webmanifest","./version-manifest.json"];
+const CORE="little-knight-core-v2.4.0";
+const CORE_ASSETS=["./ground.js?v=2.4.0","./combat.js?v=2.4.0","./hero-renderer.js?v=2.4.0","./","./index.html","./style.css?v=2.4.0","./bootstrap.js?v=2.4.0","./three-effects.js?v=2.4.0","./game.js?v=2.4.0","./manifest.webmanifest","./version-manifest.json"];
 self.addEventListener("install",e=>{self.skipWaiting();e.waitUntil(caches.open(CORE).then(c=>c.addAll(CORE_ASSETS)))});
 self.addEventListener("activate",e=>{e.waitUntil(Promise.all([self.clients.claim(),caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith("little-knight-core-")&&k!==CORE).map(k=>caches.delete(k))))]))});
 self.addEventListener("fetch",e=>{

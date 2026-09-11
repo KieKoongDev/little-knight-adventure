@@ -5,8 +5,8 @@
 <meta name="theme-color" content="#0d1119"/><meta name="apple-mobile-web-app-capable" content="yes"/>
 <link rel="manifest" href="manifest.webmanifest"/>
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png"/>
-<link rel="apple-touch-icon" href="assets/icons/icon-192.png"/><link rel="stylesheet" href="style.css?v=2.3.0"/>
-<title>อัศวินจิ๋วผจญภัย v2.3.0</title>
+<link rel="apple-touch-icon" href="assets/icons/icon-192.png"/><link rel="stylesheet" href="style.css?v=2.4.0"/>
+<title>อัศวินจิ๋วผจญภัย v2.4.0</title>
 </head>
 <body>
 
@@ -21,7 +21,7 @@
   </div>
 </div>
 
-<div id="versionBadge">v2.3.0</div><div id="rotate">หมุนหน้าจอเป็นแนวนอนเพื่อเล่น</div>
+<div id="versionBadge">v2.4.0</div><div id="rotate">หมุนหน้าจอเป็นแนวนอนเพื่อเล่น</div>
 <svg class="icon-defs" aria-hidden="true">
 <symbol id="i-attack" viewBox="0 0 24 24"><path d="M5 19 19 5M14 5h5v5M4 15l5 5"/></symbol>
 <symbol id="i-skill" viewBox="0 0 24 24"><path d="M12 3 9 10l-6 2 6 2 3 7 3-7 6-2-6-2-3-7Z"/></symbol>
@@ -41,7 +41,7 @@
 <section id="characterSelect" class="panel select-panel">
 <div class="brand-title">
 <img src="assets/ai/title_art.png" alt="อัศวินจิ๋วผจญภัย"/>
-<div><div class="eyebrow">อัศวินจิ๋วผจญภัย <span>v2.3.0</span></div><h1>เลือกอัศวิน</h1></div>
+<div><div class="eyebrow">อัศวินจิ๋วผจญภัย <span>v2.4.0</span></div><h1>เลือกอัศวิน</h1></div>
 </div>
 <p class="sub">เลือกฮีโร่ • จัดอาชีพ • หาอาวุธ • ล่าบอสกับเพื่อน</p>
 <div class="hero-grid">
@@ -94,7 +94,7 @@
   </div>
   <small>ลิงก์ชวนจะมี Room Code และ Game Server ให้เพื่อนอัตโนมัติ</small>
 </div>
-<div class="tips">Mobile: Sticky Analog • A Attack/Charge • X Skill • B Double Jump • T Throw • P Potion • G Guard<br/>คีย์บอร์ด: WASD • J ตี • K สกิล • Space กระโดด • G กัน</div>
+<div class="tips">มือถือ: ปุ่มตี / กัน / กระโดด / สกิล • กัน + กระโดด เพื่อหลบ • กดสกิลค้างเพื่อชาร์จ<br/>คีย์บอร์ด: WASD • J ตี • K สกิล • Space กระโดด • G กัน • Shift หลบ</div>
 </section>
 
 <section id="lobby" class="panel lobby hidden">
@@ -149,6 +149,7 @@
   <span id="downedMessage">เพื่อนชุบได้ก่อนหมดเวลา • จากนั้นจะ Respawn</span>
   <small id="bleedoutText">20s</small>
 </div>
+<div id="encounterHint" role="status"></div><div class="combat-help">กัน + กระโดด: หลบ • Shift: หลบ • กดสกิลค้าง: ชาร์จ</div>
 <div id="bossBanner" class="hidden">MONSTER BOSS</div>
 <div id="touchLayer">
 <div id="joystickBase" class="joystick"><div class="joy-ring"></div><div id="joystickKnob"></div></div>
@@ -168,7 +169,10 @@
 <div id="gameOver" class="overlay hidden"><div class="overlay-card"><h2>พ่ายแพ้</h2><button id="retryBtn" class="primary">ลองอีกครั้ง</button><button id="selectBtn">เปลี่ยนตัวละคร</button></div></div>
 <div id="stageClear" class="overlay hidden"><div class="overlay-card"><h2>ผ่านด่าน</h2><p id="nextStageText"></p></div></div>
 </section></main>
-<script src="bootstrap.js?v=2.3.0"></script>
-<script src="three-effects.js?v=2.3.0"></script>
-<script src="game.js?v=2.3.0"></script>
+<script src="bootstrap.js?v=2.4.0"></script>
+<script src="three-effects.js?v=2.4.0"></script>
+<script src="game.js?v=2.4.0"></script>
+<script src="hero-renderer.js?v=2.4.0"></script>
+<script src="ground.js?v=2.4.0"></script>
+<script src="combat.js?v=2.4.0"></script>
 </body></html>
